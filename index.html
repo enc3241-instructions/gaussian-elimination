@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaussian Elimination</title>
+    <link href="/style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <h1 class="header">Gauss Elimination Calculator</h1>
+    <br>
+    <div>Input an augmented matrix, [A|b]</div><br>
+    <div>For example, x+y=5, 2y=4 would be represented as:</div><br>
+    <div>1 1 5</div>
+    <div>0 2 4</div>
+    <br>
+    <div>Number of rows:</div>
+    <div>
+        <input type="range" min="2" max="8" value="2" id="RowsSlider">
+    </div>
+    <div id="RowsText">2</div>
+    <br>
+    <div>Number of cols:</div>
+    <div>
+        <input type="range" min="3" max="9" value="3" id="ColsSlider">
+    </div>
+    <div id="ColsText">3</div>
+    <br><br>
+    <button onclick="createMatrix()">Create matrix</button>
+    <br><br>
+    <div id="MatrixHolder"></div>
+    <br><br>
+    <button onclick="solve()" class="invisible" id="SolveButton">Solve</button>
+    <div id="SolutionHolder" class="invisible"></div>
+    <script src="/index.js"></script>
+</body>
+<footer style="position: fixed; bottom: 0; padding-bottom: 10px;">
+    <div>
+        Made by Jason Yau.
+    </div>
+</footer>
+</html>
